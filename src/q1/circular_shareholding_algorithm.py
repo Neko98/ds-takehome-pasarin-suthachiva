@@ -50,9 +50,8 @@ def circular_shareholding(n, edges):
             visited_rev[neighbor] = True
             stack.append(neighbor)
         
-        # > 1 companies in the SCC
-        if len(current_scc) > 1:
-          if current_scc not in circular_groups:
-            circular_groups.append(current_scc)
+      # > 1 companies in the SCC
+      if len(current_scc) > 1:
+        circular_groups.append(current_scc)
 
   return circular_groups
